@@ -1,0 +1,17 @@
+<div ng-controller="PersonalDetailsController">
+    <form name="personalDetails" novalidate="novalidate">
+        <div class="form-group">
+            <lable for="title">Mr</lable>
+            <select name="title" id="title" ng-model="personalDetails.title" ng-required>
+                <option value="mr">Mr</option>
+                <option value="mrs">Mrs</option>
+                <option value="ms">Ms</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" ng-model="personalDetails.firstName" placeholder="Firstname" ng-required />
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="collectData(personalDetails)">Submit</button>
+    </form>
+</div>
